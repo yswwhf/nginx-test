@@ -12,4 +12,4 @@ spec:
       image: 192.168.200.112/jenkins_images/nginx-test:<BUILD_TAG>
       ports:
         - containerPort: 80
-          hostPort: 31601
+          hostPort: 31602
