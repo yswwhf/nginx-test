@@ -13,3 +13,17 @@ spec:
       ports:
         - containerPort: 80
           hostPort: 31601
+      volumeMounts:
+        - name: nginx-data
+          mountPath: /usr/share/nginx/html
+#       - name: nginx-etc
+#         mountPath: /etc/nginx
+  volumes:
+    - name: nginx-data
+      persistentVolumeClaim:
+          claimName: ngnix-test
+#   - name: nginx-etc
+#     persistentVolumeClaim:
+#         claimName: ngnix-test
+  nodeSelector:
+    labelName: nginx-test-node-n01

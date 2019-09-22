@@ -16,8 +16,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo '$TZ' > /etc/timezone
 RUN yum install -y wget && \
     wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo && \
     yum install -y nginx && \
-    echo "daemon off;" >> /etc/nginx/nginx.conf && \
-    echo '<h1>Hello! This message comes from terry2_yu 2019-09-18 with Timezone (TZ=Asia/Shanghai)!</h1>' > /usr/share/nginx/html/index.html
+    echo "daemon off;" >> /etc/nginx/nginx.conf 
+#   && \
+#   echo '<h1>Hello! This message comes from terry2_yu 2019-09-18 with Timezone (TZ=Asia/Shanghai)!</h1>' > /usr/share/nginx/html/index.html
 
 #暴露端口
 EXPOSE 80
